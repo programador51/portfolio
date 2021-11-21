@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "@react95/core";
+import "@react95/icons/icons.css";
+import DeskIcons from "./structure/DeskIcons/Index";
+import Contact from "./components/Contact/Index";
+import Projects from './components/Projects/Index';
+import Welcome from './components/Welcome/Index';
+
+import "./public/img/BG.svg";
+
+import Toolbar from "./structure/Toolbar/Index";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider>
+
+        <Welcome />
+
+        <DeskIcons />
+        <Contact />
+        <Projects />
+        <Toolbar />
+      </ThemeProvider>
     </div>
   );
 }
